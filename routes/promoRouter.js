@@ -35,7 +35,19 @@ promotionRouter.route('/:promotionId')
 .get((req, res, next) => {
   let promotionId = req.params.promotionId
   res.end(`Will send promotion number ${promotionId} to you!`);
-});
+})
+.put((req, res, next) => {
+    let promotionId = req.params.promotionId
+      res.end(`Will update promotion number ${promotionId} for you!`);
+})
+.post((req, res, next) => {
+    let promotionId = req.params.promotionId
+      res.end(`Will create promotion number ${promotionId} for you!`);
+})
+.delete((req, res, next) => {
+    let promotionId = req.params.promotionId
+      res.end(`Will delete promotion number ${promotionId} for you!`);
+})
 
 
 module.exports = promotionRouter;

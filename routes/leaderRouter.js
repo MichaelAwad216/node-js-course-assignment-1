@@ -35,7 +35,19 @@ leaderRouter.route('/:leaderId')
 .get((req, res, next) => {
   let leaderId = req.params.leaderId
   res.end(`Will send leader number ${leaderId} to you!`);
-});
+})
+.put((req, res, next) => {
+    let leaderId = req.params.leaderId
+      res.end(`Will update leader number ${leaderId} for you!`);
+})
+.post((req, res, next) => {
+    let leaderId = req.params.leaderId
+      res.end(`Will create leader number ${leaderId} for you!`);
+})
+.delete((req, res, next) => {
+    let leaderId = req.params.leaderId
+      res.end(`Will delete leader number ${leaderId} for you!`);
+})
 
 
 module.exports = leaderRouter;

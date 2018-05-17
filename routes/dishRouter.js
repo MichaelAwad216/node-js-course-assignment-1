@@ -34,8 +34,20 @@ dishRouter.route('/:dishId')
 
 .get((req, res, next) => {
   let dishId = req.params.dishId
-  res.end(`Will send dish number ${dishId} to you!`);
-});
+  res.end(`Will get dish number ${dishId} to you!`);
+})
+.put((req, res, next) => {
+    let dishId = req.params.dishId
+      res.end(`Will update dish number ${dishId} for you!`);
+})
+.post((req, res, next) => {
+    let dishId = req.params.dishId
+      res.end(`Will create dish number ${dishId} for you!`);
+})
+.delete((req, res, next) => {
+    let dishId = req.params.dishId
+      res.end(`Will delete dish number ${dishId} for you!`);
+})
 
 
 module.exports = dishRouter;
